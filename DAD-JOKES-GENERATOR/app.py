@@ -16,8 +16,8 @@ with open(TOKENIZER_PATH, 'rb') as f:
     token = pickle.load(f)
 
 st.title("🤣 Dad Jokes Generator")
-seed = st.text_input("Start your joke:", "what do")
-num_words = st.slider("How many words to generate?", 1, 15, 10)
+seed = st.text_input("Start your joke:", "have")
+num_words = st.slider("How many words to generate?", 1, 15, 13)
 
 if st.button("Generate"):
     text = seed
