@@ -37,3 +37,5 @@ This is a learning project built to understand how sequence models and text gene
 ## Notes
 
 Built independently as a hands-on way to learn sequence models and text generation before moving into more advanced NLP/GenAI concepts.
+
+TRY THE MODEL HERE-> 3fny8b6tyhicvikwybq4nt.streamlit.app
