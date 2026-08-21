@@ -1,12 +1,18 @@
 import streamlit as st
 import numpy as np
 import pickle
+import os
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
+# Build absolute paths relative to this script's own location
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, 'dad_jokes_model.h5')
+TOKENIZER_PATH = os.path.join(BASE_DIR, 'tokenizer.pkl')
+
 # Load model + tokenizer once
-model = load_model('dad_jokes_model.h5')
-with open('tokenizer.pkl', 'rb') as f:
+model = load_model(MODEL_PATH)
+with open(TOKENIZER_PATH, 'rb') as f:
     token = pickle.load(f)
 
 st.title("🤣 Dad Jokes Generator")
